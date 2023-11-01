@@ -1,4 +1,3 @@
 # palautusrepositorio
-Ohtun viikkotehtävien palautukset
-[ohtuvarasto](https://github.com/rpessi/ohtuvarasto)
+[Linkki ohtuvarasto-repoon](https://github.com/rpessi/ohtuvarasto)
 
