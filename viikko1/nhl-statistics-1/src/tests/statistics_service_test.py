@@ -50,6 +50,11 @@ class TestStatisticsService(unittest.TestCase):
         self.assertEqual(len(top_5), 5)
         self.assertEqual(sort_by_points(top_5[0]), 124)
         self.assertEqual(sort_by_points(top_5[4]), 16)
+        top_5 = players.top(5, 2)
+        self.assertEqual(sort_by_points(top_5[0]), 124)
+        self.assertEqual(sort_by_points(top_5[4]), 16)
+
+
         
     def test_top_ranking_by_goals_works(self):
         players = self.stats
