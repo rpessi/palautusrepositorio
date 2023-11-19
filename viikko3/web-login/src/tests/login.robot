@@ -32,11 +32,6 @@ Login Should Fail With Message
     Login Page Should Be Open
     Page Should Contain  ${message}
 
-#Login Should Fail With Error Message
-#    [Arguments]  ${message}
-#    Register Page Should Be Open
-#    Page Should Contain  ${message}
-
 Submit Credentials
     Click Button  Login
 
