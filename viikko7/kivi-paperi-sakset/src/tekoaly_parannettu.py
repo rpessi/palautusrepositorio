@@ -10,10 +10,10 @@ class TekoalyParannettu:
             for i in range(1, len(self._muisti)):
                 self._muisti[i - 1] = self._muisti[i]
 
-            self._vapaa_muisti_indeksi = self._vapaa_muisti_indeksi - 1
+            self._vapaa_muisti_indeksi -= 1
 
         self._muisti[self._vapaa_muisti_indeksi] = siirto
-        self._vapaa_muisti_indeksi = self._vapaa_muisti_indeksi + 1
+        self._vapaa_muisti_indeksi += 1
 
     def anna_siirto(self):
         if self._vapaa_muisti_indeksi == 0 or self._vapaa_muisti_indeksi == 1:
@@ -21,20 +21,18 @@ class TekoalyParannettu:
 
         viimeisin_siirto = self._muisti[self._vapaa_muisti_indeksi - 1]
 
-        k = 0
-        p = 0
-        s = 0
+        k, p, s = 0, 0, 0
 
         for i in range(0, self._vapaa_muisti_indeksi - 1):
             if viimeisin_siirto == self._muisti[i]:
                 seuraava = self._muisti[i + 1]
 
                 if seuraava == "k":
-                    k = k + 1
+                    k += 1
                 elif seuraava == "p":
-                    p = p + 1
+                    p += 1
                 else:
-                    s = s + 1
+                    s += 1
 
         # Tehdään siirron valinta esimerkiksi seuraavasti;
         # - jos kiviä eniten, annetaan aina paperi
